@@ -1,0 +1,36 @@
+APPENDIX about known command for the bash terminal
+
+break		it allow you to exit from a loop (for, while, select)
+cd		change the directory. You can manage the directory like that:
+		cd ~/folder1/subforder1
+cd ..		just to go back to one level
+cd ../..	go back to 2 levels
+cd ~ 		go back to the home directory
+history		dispay the command history. by default you have 1000 lines in memory
+chmod 		change the permission for a file or a directory. Read "stuffs_about_permission"
+ls -l 		list the file or directories with their permission
+man		show the manual for a command 
+mkdir		create a directory into the work directory you are 
+more		display a text on the terminal skipping with the percentages 
+mv
+ps		alone it show the information about the process runnin on the current terminal 
+
+		PID TTY          TIME CMD
+ 		8300 pts/7    00:00:00 ps
+		PID	process ID
+		TTY	the terminal whome they are running
+		TIME	CPU time the process has used
+
+ps -ef		this combination allow to show all the processes and programm running into the system
+		see page 87
+pwd		it shows the current working directory
+rm		delete a file
+rmdir		delete a directory
+sleep		the command will stop for the time you want.
+sort		it just sortes a list
+sudo		used for running a command as a root. You will use your password
+tail		it shows the final part of a text on the terminal
+top		it shows the beginning part of a text on the terminal
+touch		create a new file on the current directory
+vim		open vi improved (used to ) 
+who

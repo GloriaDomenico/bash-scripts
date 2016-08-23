@@ -1,0 +1,57 @@
+By default, permissions for this file are:
+
+ls -l stuffs_about_permission
+-rw-rw-r-- 1 anabrs1 anabrs1 0 ago 23 15:10 stuffs_about_permission
+
+It means:
+"you can read and write the file but not execute it as owner and a group, everyone else on the system can only read the file created. 
+
+explanation of the string
+
+-		it is a file
+d		it is a directory
+l		it is a link
+c		it is a character device
+b		it is a block device
+n		it is a network device
+
+r		permission for reading
+w		permission for writing
+x		permission for executing
+
+there are three block. In order:
+first 		owner
+second 		group
+third		everyone else
+
+
+FILE PERMISSION CODE
+
+PERMISSION		BINARY		OCTAL		DESCRIPTION
+---			000		0		no permission
+--x			001		1		only execute permission
+-w-			010		2		only write permission
+-wx			011		3		write and execute permission
+r--			100		4		only read permission
+r-x			101		5		read and execute permission
+rw-			110		6		read and write permission
+rwx			111		7		all permissions: read write and execute
+
+
+CHMOD COMMAND
+
+chmod "option mode" file
+
+option mode written in octal code
+
+example
+
+chmod 760 stuffs_about_permission
+ls -l stuffs_about_permission 
+-rwxrw---- 1 anabrs1 anabrs1 0 ago 23 15:10 stuffs_about_permission
+
+or 
+
+chmod 776 stuffs_about_permission
+ls -l stuffs_about_permission 
+-rwxrwxrw- 1 anabrs1 anabrs1 0 ago 23 15:10 stuffs_about_permission
