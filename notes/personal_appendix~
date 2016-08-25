@@ -8,11 +8,74 @@ cd ../..	go back to 2 levels
 cd ~ 		go back to the home directory
 history		dispay the command history. by default you have 1000 lines in memory
 chmod 		change the permission for a file or a directory. Read "stuffs_about_permission"
-ls -l 		list the file or directories with their permission
 man		show the manual for a command 
 mkdir		create a directory into the work directory you are 
 more		display a text on the terminal skipping with the percentages 
 mv
+pwd		it shows the current working directory
+sleep		the command will stop for the time you want.
+sudo		used for running a command as a root. You will use your password
+tail		it shows the final part of a text on the terminal
+tail -n 2	show the last two lines on the terminal	
+head		displays the first gruops of lines 
+head -5		displays the first 5 lines
+top		it shows the beginning part of a text on the terminal
+touch		create a new file on the current directory
+vim		open vi improved (used to write scripts) 
+who		it shows the owner
+htop		information about operation system CPU, RAM ...
+
+#LISTING FILES AND DIRECTORIES
+ls		list files into the current directory in alphabetical order
+ls -F		list in a way to distinguish files from directories 
+		/ in the end, it is a directory
+		* in the end, it is an executable file (a script)
+ls -l 		list the file or directories with their permission
+ls -a		list hidden files along with normal files
+		P.S. hidden files start with .
+ls -F -R or
+ls -FR		it is called recursive option, it shows files that are contained within subdirectories
+ls -i		to view a file or directory's inode number
+ls -li		useful combine both
+
+#COPYING COMMAND
+cp		copying files and directories from one location to onother
+cp -R		copying an entire folder content to another folder (we use the recursive command)
+cp -i		copying a file overwriting an existing file, asking you want to 
+
+#LINKING FILES
+used to have different copies of the same file on the system. We have:
+
+ln -s		symbolic link. Original file must exist, symbolically linked files do not share the same content
+		
+		Use: ln -s [original file] [linked file] 
+		
+		with ls -l you can see the links between the files 
+		for example: linked file -> original file
+ln		hard link Original file must exist.
+
+		Use: ln -s [original file] [linked file]
+
+		Files have same PID and same size (take a look with ls -li) 
+
+#REMOVING FILES AND DIRECTORIES
+rm		deletes a file
+rm -i 		deletes a file but before asks you if you are sure to delete it
+rmdir		deletes a directory. It MUST be empty: before you must delete all the files into the directory
+rmdir -i 	it is not exist. YOU CAN ONLY DELETE EMPY DIRECTORIES
+			so we can use..
+rm -r		allows the command to descend into the directory first remove the file inside and then the directory itself
+rm -ri		the same of before but asking if you want to delete the file
+rm -rf		allows to delete directories and files inside without warmings. to be used sparingly
+
+#CAT COMMAND
+
+cat		displays all the data inside a text file
+cat -n		displays the lines for you
+cat -b		only numbers the lines that have a text
+cat -T		does not show tab characters
+
+#PS COMMAND PAGE 87 LINUX BIBBLE
 ps		alone it show the information about the process runnin on the current terminal 
 
 		PID TTY          TIME CMD
@@ -23,15 +86,25 @@ ps		alone it show the information about the process runnin on the current termin
 
 ps -ef		this combination allow to show all the processes and programm running into the system
 		see page 87
-pwd		it shows the current working directory
-rm		delete a file
-rmdir		delete a directory
-sleep		the command will stop for the time you want.
+
+#SORTING DATA
 sort		it just sortes a list
-sudo		used for running a command as a root. You will use your password
-tail		it shows the final part of a text on the terminal
-top		it shows the beginning part of a text on the terminal
-touch		create a new file on the current directory
-vim		open vi improved (used to write scripts) 
-who		it shows the owner
-htop		information about operation system CPU, RAM ...
+sort -n		recognises numbers as number instead of characters (this is the default option on bash)
+
+		there are other options on page 105
+
+###########################################################################################################################################
+
+kill		kill a command. It works only using the process PID
+killall		kill commands without a PID
+
+		Use: killall http* 
+		it kills all the process starting with http
+
+
+
+
+
+
+
+
