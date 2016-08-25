@@ -1,0 +1,14 @@
+TEST FILE COMPARISON
+-d		it exists and it is a directory
+-e		checks if the file exists
+-f		it exists and it is a file
+-r		checks if file exists and is readable
+-s		checks if file exists and is not empty
+-w		checks if file exists and is writable
+-x		checks if file exists and is executable
+-O		checks if file exists and is owner by the current user
+-G		checks if file exists and the default group is the same as the current user
+
+
+file1 -nt file2		checks if file1 is newer than file2
+file1 -ot file2		checks if file1 is alder than file2
