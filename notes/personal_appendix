@@ -7,6 +7,17 @@ cd ..		just to go back to one level
 cd ../..	go back to 2 levels
 cd ~ 		go back to the home directory
 history		dispay the command history. by default you have 1000 lines in memory
+
+###############################################################################################
+cat .bash_history
+prints the hidden .bash_history file which is located in hte user's home directory
+
+hint
+if you want to resume a command previously used type
+![number of the command diplayed in the history file]
+
+###############################################################################################
+
 chmod 		change the permission for a file or a directory. Read "stuffs_about_permission"
 man		show the manual for a command 
 mkdir		create a directory into the work directory you are 
@@ -24,6 +35,13 @@ touch		create a new file on the current directory
 vim		open vi improved (used to write scripts) 
 who		it shows the owner
 htop		information about operation system CPU, RAM ...
+
+bash		create a a new shell program called child shell
+		or in alternative /bin/bash/
+
+sleep		example sleep 100
+		accepts as parameter the number of seconds you want the process to wait
+sleep []&	puts a command into baskground mode
 
 #################################################################################################################
 mount		dislays a list of media devices currently mounted on the system (more information page 97)
@@ -92,6 +110,8 @@ ps		alone it show the information about the process runnin on the current termin
 
 ps -ef		this combination allow to show all the processes and programm running into the system
 		see page 87
+ps -f		shows child shell processes with PID and PPID
+ps --forest	shows the nesting of the subshells (useful if you have many)
 
 #SORTING DATA
 sort		it just sortes a list
@@ -100,17 +120,43 @@ sort -n		recognises numbers as number instead of characters (this is the default
 		there are other options on page 105
 
 #DF COMMAND
-df		
+df		shows each mounted filesystem that contains data
+df -h		shows the dish space in M or in G
+-h	 	it means human readable
+
+#DU COMMAND
+du		displays all the file directories and sub-directories under the current directory and shows how many space they take
+du -c		produces a grand total of all files listed
+du -h		prints size in a human readable form (Kb, Mb, Gb)
+du -s		summarizes each argument
+du -hs		shows the folder size 
+
+
+
+#SEARCHING FOR DATA
+grep 		searches for a data in a file
+ 
+		use: grep [options] pattern [file]
+
+grep -v		reverce the search 
+grep -n		finds the line number where the matching patterns are found
+grep -c		counts the parameters matched
+grep -e		to specify more than one matching pattern
+
+		use: grep -e [option] -e [option] pattern [file]
 
 ###########################################################################################################################################
 
 kill		kill a command. It works only using the process PID
+
+		USE: sudo kill PID
+
 killall		kill commands without a PID
 
 		Use: killall http* 
 		it kills all the process starting with http
 
-
+##############################################################################################################
 
 
 
