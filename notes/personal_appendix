@@ -8,6 +8,9 @@ cd ../..	go back to 2 levels
 cd ~ 		go back to the home directory
 history		dispay the command history. by default you have 1000 lines in memory
 
+
+cntr + z	stop a running process on the shell
+
 ###############################################################################################
 cat .bash_history
 prints the hidden .bash_history file which is located in hte user's home directory
@@ -157,6 +160,41 @@ killall		kill commands without a PID
 		it kills all the process starting with http
 
 ##############################################################################################################
+
+INSTALLING SOFTWARE
+
+dpkg --list		lists installed packages
+dpkg -L			lists all the files associated with a particular software package
+			usage dpkl -L package_name
+
+aptitude search 	searchs for a package
+			usage: aptitude search package_name
+aptitude install	installs a software from a repository
+			usage: sudo aptitude install package_name
+aptitude safe-upgrade	update all the installed packeges to the most recent version
+			usage: it does not take a software package name as argument
+			       sudo aptitude safe-upgrade
+apt-get	install		install a packege
+			usage: sudo apt-get install package_name
+NOTE
+all the repositories are stored in the file /etc/apt/sources.list 
+
+###############################################################################################################
+
+OUTPUT REDIRECTION 
+command > outputfile	writes the output on a file
+command >> outputfile	overwrites the output on a file
+	
+INPUT REDIRECTION
+command < inputfile	takes the contents of a file and redirects it to a command
+
+##############################################################################################################
+
+USING TEMPORARY FILES
+
+mktemp			creates a file in the local directory
+			template any_file_name.XXXXXX plus six X's appended to the end of the filename
+mktemp -t		creates the file in the temporary directory of the sistem /tmp
 
 
 
